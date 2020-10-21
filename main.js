@@ -11,6 +11,12 @@
 // cumin
 // cocoa
 
+const favRecipe = {
+  title: "Mole",
+  servings: 2,
+  ingredients:["cinnamon", "cumin", "cocoa"]
+};
+console.log(`${favRecipe.title} \nServes: ${favRecipe.servings} \nIngredients: \n${favRecipe.ingredients[0]} \n${favRecipe.ingredients[1]} \n${favRecipe.ingredients[2]}`);
 
 
 
@@ -24,7 +30,16 @@
 // or not. If you read it, log a string like "You already read "1984" by George Orwell"
 // and vice versa
 
-
+const bookDetails = [{title:"Harry Potter", author:"J.K Rowling", alreadyRead: true},
+                    {title:"Twilight", author:"Stephanie Meyer", alreadyRead: false }]
+for (let i=0; i<bookDetails.length; i++){
+  console.log(`${bookDetails[i].title} by ${bookDetails[i].author}`)
+  if(bookDetails[i].alreadyRead == true){
+    console.log(`You already read ${bookDetails[i].title} by ${bookDetails[i].author}`)
+  } else{
+      console.log(`You have not read ${bookDetails[i].title} by ${bookDetails[i].author} yet`)
+  }
+}
 
 //Exercise #3
 //Create your object representing your favorite movie, like so
@@ -42,7 +57,20 @@
 // Maybe your favorite came with an extended cut, including deleted scenes. 
 // Write a statement that increases your movie object's duration by 30 minutes. 
 
+const shawshank = {
+  title: 'Shawshank Redemption',
+  director: 'Frank Darabont',
+  actors: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
+  releaseYear: 1994, 
+  duration: 142
+}
+console.log(shawshank.title);
+console.log(shawshank.director);
+console.log(shawshank.releaseYear);
+console.log(shawshank.duration + 30);
 
+let arrayList = [1, 2, 3];
+console.log(Array.isArray(arrayList));
 
 
 
@@ -54,6 +82,7 @@
 // That it is not an object
 let arrayList = [1, 2, 3];
 
+console.log(`The arrayList an array: ${Array.isArray(arrayList)} `);
 
 //Exercise #5
 // Write a function countCharacters that, when given a string as an argument,
